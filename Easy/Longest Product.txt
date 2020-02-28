@@ -1,0 +1,30 @@
+long long findMaxProduct(int A[], int n, int k)
+
+{
+
+long long int m=1,r=1;
+
+int i,j;
+
+for(i=0;i<k;i++)
+
+m=m*A[i];
+
+for(i=1;i<=n-k;i++)
+
+{
+   r=1;
+
+    for(j=i;j<i+k;j++)
+
+    r=r*A[j];
+
+    if(r>m)
+
+    m=r;
+
+}
+
+return m;
+
+}
